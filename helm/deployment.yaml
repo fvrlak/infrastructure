@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: infinite-canvas
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: infinite-canvas
+  template:
+    metadata:
+      labels:
+        app: infinite-canvas
+    spec:
+      containers:
+      - name: infinite-canvas
+        image: infinite-canvas:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 4000 # Next.js port
+        - containerPort: 3001 # Metrics server port
+
