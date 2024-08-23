@@ -8,7 +8,6 @@ As a owner of the cluster I should know how much they eat resources and how much
 **Application layer**
     - Dockerfile
     - Github Actions
-    - `server.js`, `concurrently`
 
 **Middle layer**
     - Argo CD
